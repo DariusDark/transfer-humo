@@ -1,3 +1,19 @@
 .header {
     padding: 20px 0px;
 }
+
+.header-row--gap {
+    gap: 27px;
+}
+
+.flex-auto {
+    flex: 1 1 auto;
+}
+
+.header__phone-number {
+    text-align: right;
+}
+
+.link--padding {
+    display: inline-block;
+}

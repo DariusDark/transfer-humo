@@ -1,0 +1,45 @@
+.application {
+  padding: 40px 0px 0px 0px;
+}
+
+.application-row {
+  /* gap: 30px; */
+  padding: 0px 30px;
+}
+
+.application__body {
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.application__body-item {
+  max-width: 380px;
+}
+
+.application__title {
+  color: #232323;
+  font-weight: 800;
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+.application__description {
+  margin-bottom: 36px;
+  line-height: 28px;
+}
+
+.application__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.application__link {
+    flex: 0 1 48%;
+}
+
+.application__icon {
+    height: 20px;
+}

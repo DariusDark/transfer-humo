@@ -1,1 +1,21 @@
+.wrapper {
+  min-height: 100vh;
+  min-width: 100vw;
+}
 
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0px 30px;
+}
+.container-md {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0px 30px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
