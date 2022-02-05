@@ -4,12 +4,7 @@
 }
 
 .container {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0px 30px;
-}
-.container-md {
-  max-width: 1020px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0px 30px;
 }
@@ -18,4 +13,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

@@ -10,7 +10,7 @@ import "./application.css";
 function Application() {
   return (
     <section className="application" id="application">
-      <div className="container-md">
+      <div className="container">
         <div className="row application-row">
           <div className="application__body">
             <div className="application__body-item">

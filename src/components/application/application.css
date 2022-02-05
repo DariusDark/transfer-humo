@@ -15,7 +15,8 @@
 }
 
 .application__body-item {
-  max-width: 380px;
+  margin-left: auto;
+  max-width: 470px;
 }
 
 .application__title {
@@ -37,7 +38,7 @@
 }
 
 .application__link {
-    flex: 0 1 48%;
+    flex: 0 1 auto;
 }
 
 .application__icon {

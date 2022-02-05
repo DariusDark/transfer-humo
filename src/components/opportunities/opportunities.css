@@ -1,7 +1,17 @@
 .opportunities {
     padding: 100px 0px;
+    background: rgb(235, 235, 235);
+}
+
+.opportunities__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--secondaryColor);
+    margin-bottom: 80px;
 }
 
 .opportunities-row {
+    align-items: stretch;
     gap: 15px;
 }

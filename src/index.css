@@ -3,6 +3,7 @@
 :root {
   --mainFontSize: 1rem;
   --mainFontColor: #505050;
+  --secondaryColor: #3d3d3d;
 }
 
 * {

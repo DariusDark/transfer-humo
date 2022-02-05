@@ -24,7 +24,10 @@ function Opportunities() {
 
   return (
     <section className="opportunities" id="opportunities">
-      <div className="container-md">
+      <div className="container">
+        <h2 className="opportunities__title">
+          Возможности
+        </h2>
         <div className="row opportunities-row">
           {items.map((currItem) => (
             <OpportunitiesItem key={currItem.id} item={currItem} />

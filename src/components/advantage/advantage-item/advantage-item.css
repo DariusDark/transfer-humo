@@ -1,0 +1,12 @@
+.advantage__body {
+  width: 100%;
+}
+.advantage-row {
+  gap: 30px;
+}
+.advantage-row--reverse {
+    flex-direction: row-reverse;
+}
+.advantage__body-container {
+  flex: 0 1 50%;
+}
