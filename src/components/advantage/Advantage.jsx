@@ -4,7 +4,7 @@ import "./advantage.css";
 import photo1 from "../../assets/images/advantage/photo-1.png";
 import photo2 from "../../assets/images/advantage/photo-2.png";
 import photo3 from "../../assets/images/advantage/photo-3.png";
-
+import photo4 from "../../assets/images/advantage/photo-4.png";
 
 function Advantage() {
   const items = [
@@ -13,7 +13,7 @@ function Advantage() {
       title: "Перевод по номеру телефона",
       text: "Отправляйте деньги родным, даже если у них нет карты",
       photo: photo1,
-      itemImageClassName: 'advantage__image--align-self-end'
+      itemImageClassName: "advantage__image--align-self-end",
     },
     {
       id: 2,
@@ -28,11 +28,19 @@ function Advantage() {
       text: "Оплачивайте мобильную связь, коммунальные услуги и многое другое",
       photo: photo3,
     },
+    {
+      id: 4,
+      title: "Карты",
+      text: "Прикрепляйте карты (Visa, Mastercard или «Мир» выпущенные в России)",
+      photo: photo4,
+      itemClassName: 'advantage-row--reverse',
+      itemImageClassName: 'advantage__image--align-self-end'
+    },
   ];
   return (
     <section className="advantage" id="advantage">
       <div className="container">
-        <div className="column">
+        <div className="column advantage-column">
           {items.map((currItem) => (
             <AdvantageItem key={currItem.id} item={currItem} />
           ))}
