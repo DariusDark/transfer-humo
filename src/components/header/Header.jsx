@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/header/logo.svg";
 
 import "./header.css";
 
 function Header() {
+  const headerRef = useRef(null);
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+        headerRef.current.classList.toggle('header--sticky', this.scrollY > 0);
+    });
+  }, []);
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="container">
         <div className="row header-row--gap">
           <div className="header__body flex-auto">
@@ -21,17 +27,26 @@ function Header() {
               <ul className="header__unsorted-list">
                 <div className="row header-row--gap">
                   <li className="header__list">
-                    <a className="header__link link--padding" href="#application">
+                    <a
+                      className="header__link link--padding"
+                      href="#application"
+                    >
                       Application
                     </a>
                   </li>
                   <li className="header__list">
-                    <a className="header__link link--padding" href="#opportunities">
+                    <a
+                      className="header__link link--padding"
+                      href="#opportunities"
+                    >
                       Opportunities
                     </a>
                   </li>
                   <li className="header__list">
-                    <a className="header__link link--padding" href="#capabilities">
+                    <a
+                      className="header__link link--padding"
+                      href="#capabilities"
+                    >
                       Capabilities
                     </a>
                   </li>
@@ -50,7 +65,10 @@ function Header() {
           </div>
           <div className="header__body flex-auto">
             <div className="header__phone-number">
-              <a className="header__phone-link link--padding" href="tel:+992887775544">
+              <a
+                className="header__phone-link link--padding"
+                href="tel:+992887775544"
+              >
                 (+992)88-777-55-44
               </a>
             </div>
