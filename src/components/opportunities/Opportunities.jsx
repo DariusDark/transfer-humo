@@ -1,4 +1,5 @@
 import React from "react";
+import './opportunities.css';
 import OpportunitiesItem from "./opportunities-item/OpportunitiesItem";
 
 function Opportunities() {
@@ -23,10 +24,10 @@ function Opportunities() {
 
   return (
     <section className="opportunities" id="opportunities">
-      <div className="container">
-        <div className="row">
+      <div className="container-md">
+        <div className="row opportunities-row">
           {items.map((currItem) => (
-            <OpportunitiesItem key={Math.random() * 2000 + Date.now()} item={currItem} />
+            <OpportunitiesItem key={currItem.id} item={currItem} />
           ))}
         </div>
       </div>

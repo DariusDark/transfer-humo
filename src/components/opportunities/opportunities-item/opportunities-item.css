@@ -1,0 +1,33 @@
+.opportunities__body {
+    flex: 0 1 33.333%;
+    gap: 22px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.opportunities__number {
+    height: 80px;
+    width: 80px;
+    display: grid;
+    place-items: center;
+    background: #ff6c2f;
+    border-radius: 50%;
+}
+
+.opportunities__number-text {
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.opportunities__title {
+    color: #454545;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.opportunities__decription {
+    max-width: 240px;
+    font-weight: 500;
+}
