@@ -5,8 +5,44 @@
   gap: 30px;
 }
 .advantage-row--reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
+
 .advantage__body-container {
   flex: 0 1 50%;
+}
+
+.advantage__item-container--max-width {
+  max-width: 330px;
+}
+
+.advantage__item-title {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 12px;
+}
+
+.advantage__item-text {
+  font-size: 18px;
+  line-height: 28px;
+}
+.advantage__body-image {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  overflow: hidden;
+  align-items: start;
+  border-radius: 50%;
+  background: #f0f0f0;
+  justify-content: center;
+}
+
+.advantage__body-container--justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.advantage__image--align-self-end {
+  align-self: flex-end;
 }

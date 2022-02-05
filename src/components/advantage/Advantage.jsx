@@ -11,15 +11,16 @@ function Advantage() {
     {
       id: 1,
       title: "Перевод по номеру телефона",
-      text: "Скачать “Хумо Переводы”",
+      text: "Отправляйте деньги родным, даже если у них нет карты",
       photo: photo1,
+      itemImageClassName: 'advantage__image--align-self-end'
     },
     {
       id: 2,
       title: "Перевод на карты «Корти Милли»",
       text: "Переводите деньги из России в Таджикистан и обратно",
       photo: photo2,
-      classValue: "advantage-row--reverse",
+      itemClassName: "advantage-row--reverse",
     },
     {
       id: 3,
