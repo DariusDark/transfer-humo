@@ -4,14 +4,22 @@
   height: 100%;
 }
 
+.container-lg {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0px 80px;
+  padding: 0px 30px;
 }
 
 .row {
+  gap: 30px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }

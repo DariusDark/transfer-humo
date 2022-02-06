@@ -8,15 +8,13 @@
 }
 
 .application__body {
-  flex: 0 1 50%;
+  flex: 1 1 48%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .application__body-item {
-  margin-left: auto;
-  max-width: 470px;
 }
 
 .application__title {
@@ -38,9 +36,13 @@
 }
 
 .application__link {
-    flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 40%;
+  max-width: 340px;
 }
 
 .application__icon {
-    height: 20px;
+  height: 20px;
 }
