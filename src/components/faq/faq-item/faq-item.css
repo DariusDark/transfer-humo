@@ -21,7 +21,7 @@
 }
 .faq__question-arrow {
   position: relative;
-  width: 15px;
+  width: 30px;
   height: 1px;
   display: flex;
   justify-content: center;
@@ -31,23 +31,24 @@
   position: absolute;
   content: "";
   height: 100%;
-  width: 100%;
+  width: 15px;
   background: #000;
-  transition: 0.3s transform;
+  transition: 0.3s right;
 }
 .faq__question-arrow:before {
-  right: 11px;
-  transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: 10px;
 }
 .faq__question-arrow:after {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg) ;
+    right: 0;
 }
 
 .faq__question-arrow--active:before {
-  transform: rotate(-45deg);
+    right: 5px;
 }
 .faq__question-arrow--active:after {
-  transform: rotate(45deg);
+    right: 5px;
 }
 
 .faq__question-title {

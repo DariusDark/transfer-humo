@@ -7,6 +7,9 @@ function Header() {
   const headerRef = useRef(null);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [showButton, setShowButton] = useState(false);
+  const closeModalScreen = () => {
+    setIsButtonClicked(false);
+  };
   useEffect(() => {
     window.innerWidth <= 990 ? setShowButton(true) : setShowButton(false);
 
@@ -44,26 +47,27 @@ function Header() {
                 className={`header__menu-nav ${
                   isButtonClicked ? "header__menu-nav--active" : ""
                 }`}
+                onClick={closeModalScreen}
               >
                 <ul className="header__menu-unsorted-list">
-                  <div className="column">
+                  <div className="column menu-column">
                     <li className="header__menu-list">
-                      <a className="header__menu-link" href="#application">
+                      <a className="header__link header__menu-link" href="#application" onClick={closeModalScreen}>
                         Приложение
                       </a>
                     </li>
                     <li className="header__menu-list">
-                      <a className="header__menu-link" href="#opportunities">
+                      <a className="header__link header__menu-link" href="#opportunities" onClick={closeModalScreen}>
                         Возможности
                       </a>
                     </li>
                     <li className="header__menu-list">
-                      <a className="header__menu-link" href="#advantage">
+                      <a className="header__link header__menu-link" href="#advantage" onClick={closeModalScreen}>
                         Преимущества
                       </a>
                     </li>
                     <li className="header__menu-list">
-                      <a className="header__menu-link" href="#faq">
+                      <a className="header__link header__menu-link" href="#faq" onClick={closeModalScreen}>
                         Вопросы и Ответы
                       </a>
                     </li>

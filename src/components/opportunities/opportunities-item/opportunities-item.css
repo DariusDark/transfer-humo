@@ -33,3 +33,9 @@
     line-height: 25px;
     font-weight: 500;
 }
+
+@media (max-width: 585px) {
+    .opportunities__body {
+        flex: 1 1 50%;
+    }
+}

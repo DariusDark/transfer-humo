@@ -38,3 +38,15 @@
     padding: 24px 0px;
     background: var(--secondaryBgColor);
 }
+
+@media (max-width: 590px) {
+    .footer__body {
+        flex: 1 1 50%;
+    }
+    .footer__body--self-end {
+        align-items: flex-start;
+    }
+    .footer__body--align-center {
+        align-items: center;
+    }
+}

@@ -33,8 +33,8 @@ function Advantage() {
       title: "Карты",
       text: "Прикрепляйте карты (Visa, Mastercard или «Мир» выпущенные в России)",
       photo: photo4,
-      itemClassName: 'advantage-row--reverse',
-      itemImageClassName: 'advantage__image--align-self-end'
+      itemClassName: "advantage-row--reverse",
+      itemImageClassName: "advantage__image--align-self-end",
     },
   ];
   return (

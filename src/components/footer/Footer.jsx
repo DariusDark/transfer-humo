@@ -60,14 +60,14 @@ function Footer() {
       <div className="footer__bottom">
         <div className="container">
           <div className="row footer-row">
-            <div className="footer__body">
+            <div className="footer__body footer__body--align-center">
               <div className="footer__date">
                 <span className="footer__date-text">
                   {`© ${currentDate} ЗАО МДО «Хумо»`}
                 </span>
               </div>
             </div>
-            <div className="footer__body footer__body--self-end">
+            <div className="footer__body footer__body--self-end footer__body--align-center">
               <div className="footer__copyright">
                 <span className="footer__copyright-text">
                   All rights reserved

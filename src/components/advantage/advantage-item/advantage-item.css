@@ -9,11 +9,7 @@
 }
 
 .advantage__body-container {
-  flex: 0 1 46%;
-}
-
-.advantage__item-container--max-width {
-  max-width: 400px;
+  flex: 1 1 46%;
 }
 
 .advantage__item-title {
@@ -26,16 +22,25 @@
 .advantage__item-text {
   font-size: 18px;
   line-height: 28px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .advantage__body-image {
-  width: 400px;
-  height: 400px;
+  flex: 1 0 48%;
+  aspect-ratio: 1;
+  max-width: 400px;
+  padding: 0px 60px 0px;
   display: flex;
   overflow: hidden;
   align-items: start;
   border-radius: 50%;
   background: #f0f0f0;
   justify-content: center;
+}
+
+.advantage__image {
+  width: 100%;
+  height: auto;
 }
 
 .advantage__body-container--justify-center {
@@ -45,4 +50,12 @@
 
 .advantage__image--align-self-end {
   align-self: flex-end;
+}
+
+
+@media (max-width: 585px) {
+  .advantage__body-container {
+      flex: 0 1 100%;
+      text-align: center;
+    }
 }
