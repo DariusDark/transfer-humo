@@ -6,6 +6,7 @@
 }
 
 .header--sticky {
+  z-index: 1;
   border-bottom: 1px solid #cacaca;
   box-shadow: 0 0 20px #0000004d;
   top: 0;

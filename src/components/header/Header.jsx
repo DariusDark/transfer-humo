@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import logo from "../../assets/images/header/logo.svg";
 
 import "./header.css";
@@ -8,7 +7,7 @@ function Header() {
   const headerRef = useRef(null);
   useEffect(() => {
     window.addEventListener("scroll", function () {
-        headerRef.current.classList.toggle('header--sticky', this.scrollY > 0);
+      headerRef.current.classList.toggle("header--sticky", this.scrollY > 0);
     });
   }, []);
   return (
@@ -17,9 +16,9 @@ function Header() {
         <div className="row header-row--gap">
           <div className="header__body flex-auto">
             <div className="header__logo">
-              <Link className="link--padding" to="/">
+              <a className="link--padding" href="#root">
                 <img className="header__logo-icon" src={logo} alt="Хумо МДО" />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="header__body">
@@ -45,9 +44,9 @@ function Header() {
                   <li className="header__list">
                     <a
                       className="header__link link--padding"
-                      href="#capabilities"
+                      href="#advantage"
                     >
-                      Capabilities
+                      Advantage
                     </a>
                   </li>
                   <li className="header__list">
