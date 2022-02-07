@@ -1,5 +1,7 @@
 .advantage {
     padding: 100px 0px;
+    background: var(--mainBgColor);
+    color: var(--mainFontColor);
 }
 
 .advantage-column {

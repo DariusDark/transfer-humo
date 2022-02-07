@@ -6,7 +6,8 @@
   --mainBgColor: #ffffff;
   --mainFontColor: #5c5c5c;
   --secondaryColor: #3d3d3d;
-  --secondaryBgColor: #f5f5f5;
+  --secondaryBgColor: #ebebeb;
+  --boxShadowColor: #0000004d;
 }
 
 * {

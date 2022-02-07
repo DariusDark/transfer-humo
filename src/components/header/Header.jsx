@@ -3,7 +3,7 @@ import logo from "../../assets/images/header/logo.svg";
 
 import "./header.css";
 
-function Header() {
+function Header({ handleClick }) {
   const headerRef = useRef(null);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [showButton, setShowButton] = useState(false);
@@ -52,22 +52,38 @@ function Header() {
                 <ul className="header__menu-unsorted-list">
                   <div className="column menu-column">
                     <li className="header__menu-list">
-                      <a className="header__link header__menu-link" href="#application" onClick={closeModalScreen}>
+                      <a
+                        className="header__link header__menu-link"
+                        href="#application"
+                        onClick={closeModalScreen}
+                      >
                         Приложение
                       </a>
                     </li>
                     <li className="header__menu-list">
-                      <a className="header__link header__menu-link" href="#opportunities" onClick={closeModalScreen}>
+                      <a
+                        className="header__link header__menu-link"
+                        href="#opportunities"
+                        onClick={closeModalScreen}
+                      >
                         Возможности
                       </a>
                     </li>
                     <li className="header__menu-list">
-                      <a className="header__link header__menu-link" href="#advantage" onClick={closeModalScreen}>
+                      <a
+                        className="header__link header__menu-link"
+                        href="#advantage"
+                        onClick={closeModalScreen}
+                      >
                         Преимущества
                       </a>
                     </li>
                     <li className="header__menu-list">
-                      <a className="header__link header__menu-link" href="#faq" onClick={closeModalScreen}>
+                      <a
+                        className="header__link header__menu-link"
+                        href="#faq"
+                        onClick={closeModalScreen}
+                      >
                         Вопросы и Ответы
                       </a>
                     </li>
@@ -119,13 +135,13 @@ function Header() {
                 </nav>
               </div>
               <div className="header__body flex-auto">
-                <div className="header__phone-number">
-                  <a
-                    className="header__phone-link link--padding"
-                    href="tel:+992887775544"
+                <div className="header__button-container">
+                  <button
+                    className="header__button-toggle button-toggle--padding"
+                    onClick={handleClick}
                   >
-                    (+992)88-777-55-44
-                  </a>
+                    Свичтер
+                  </button>
                 </div>
               </div>
             </>

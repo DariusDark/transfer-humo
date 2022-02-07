@@ -26,33 +26,21 @@ function Application() {
                   classValue="link--secondary application__link application__link-andriod"
                   source="https://play.google.com/store/apps/details?id=tj.humo.transfer"
                 >
-                  <img
-                    className="application__icon"
-                    src={IconPlayMarket}
-                    alt="Apple"
-                  />{" "}
+                  <i class="application__icon fab fa-google-play"></i>
                   Скачать для Android
                 </Link>
                 <Link
                   classValue="link--secondary application__link application__link-ios"
                   source="https://apps.apple.com/ru/app//id1497473277"
                 >
-                  <img
-                    className="application__icon"
-                    src={IconApple}
-                    alt="Apple"
-                  />{" "}
+                  <i class="application__icon fab fa-apple"></i>
                   Скачать для iOS
                 </Link>
                 <Link
                   classValue="link--secondary application__link application__link-andriod"
                   source="/static/media/205132.f40fee3f.apk"
                 >
-                  <img
-                    className="application__icon"
-                    src={IconApk}
-                    alt="Apple"
-                  />
+                  <i class="application__icon far fa-file"></i>
                   Android - APK
                 </Link>
               </div>

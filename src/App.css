@@ -4,6 +4,15 @@
   height: 100%;
 }
 
+[data-theme="dark"] {
+  --mainBgColor: #1c1c1c;
+  --mainFontColor: rgb(211, 211, 211);
+  --titleColor: #b5b5b5;
+  --secondaryTitleColor: #e8e8e8;
+  --secondaryBgColor: #3c3c3c;
+  --boxShadowColor: #5c5c5c36;
+}
+
 .container-lg {
   max-width: 1640px;
   margin: 0 auto;

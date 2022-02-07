@@ -1,5 +1,7 @@
 .application {
   padding: 40px 0px 0px 0px;
+  background: var(--mainBgColor);
+  color: var(--mainFontColor);
 }
 
 .application-row {
@@ -33,6 +35,7 @@
 }
 
 .application__link {
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +45,7 @@
 }
 
 .application__icon {
-  height: 20px;
+  font-size: 1.1rem;
 }
 
 

@@ -1,13 +1,14 @@
 .opportunities {
     padding: 100px 0px;
-    background: rgb(235, 235, 235);
+    background: var(--secondaryBgColor);
+    color: var(--mainFontColor);
 }
 
 .opportunities__title {
     text-align: center;
     font-size: 28px;
     font-weight: 900;
-    color: var(--secondaryColor);
+    color: var(--secondaryTitleColor);
     margin-bottom: 80px;
 }
 

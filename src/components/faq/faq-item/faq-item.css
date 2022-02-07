@@ -1,7 +1,7 @@
 .faq__body {
-  background: #fff;
+  background: var(--mainBgColor);
   border-radius: 7px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px var(--boxShadowColor);
   overflow: hidden;
   width: 100%;
   max-height: 60px;
@@ -32,7 +32,7 @@
   content: "";
   height: 100%;
   width: 15px;
-  background: #000;
+  background: var(--mainFontColor);
   transition: 0.3s right;
 }
 .faq__question-arrow:before {
@@ -55,17 +55,17 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  color: #212529;
+  color: var(--secondaryTitleColor);
 }
 
 .faq__answer {
   line-height: 1.6;
-  color: #7b7b7b;
+  color: var(--mainFontColor);
   padding: 0px 32px 20px;
 }
 
 .faq__answer-link {
-  color: #0056b3;
+  color: #0d5fb8;
 }
 
 .faq__answer-link:hover {

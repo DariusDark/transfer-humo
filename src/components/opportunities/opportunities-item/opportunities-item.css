@@ -24,7 +24,7 @@
 }
 
 .opportunities__item-title {
-    color: #454545;
+    color: var(--secondaryTitleColor);
     font-weight: 600;
     font-size: 20px;
 }

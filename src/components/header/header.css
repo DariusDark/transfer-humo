@@ -1,13 +1,14 @@
 .header {
   padding: 20px 0px;
-  background: #fff;
+  background: var(--mainBgColor);
+  color: var(--mainFontColor);
   transition: 0.3s border-bottom ease, 0.3s box-shadow ease;
 }
 
 .header--sticky {
   z-index: 1;
-  border-bottom: 1px solid #cacaca;
-  box-shadow: 0 0 5px #0000004d;
+  border-bottom: 1px solid var(--secondaryBgColor);
+  box-shadow: 0 0 5px var(--boxShadowColor);
   top: 0;
   position: sticky;
 }
@@ -60,10 +61,11 @@
   flex: 1 1 auto;
 }
 
-.header__phone-number {
+.header__button-container {
   text-align: right;
 }
 
-.link--padding {
+.button-toggle--padding {
+  color: inherit;
   display: inline-block;
 }
