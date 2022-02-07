@@ -1,4 +1,3 @@
-import React from "react";
 import AdvantageItem from "./advantage-item/AdvantageItem";
 import "./advantage.css";
 import photo1 from "../../assets/images/advantage/photo-1.png";
