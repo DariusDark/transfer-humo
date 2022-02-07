@@ -11,6 +11,8 @@
   --secondaryTitleColor: #e8e8e8;
   --secondaryBgColor: #3c3c3c;
   --boxShadowColor: #5c5c5c36;
+  --modalBgColor: #57575772;
+  --togglerBgColor: #3c3c3c;
 }
 
 .container-lg {

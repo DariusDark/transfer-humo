@@ -6,8 +6,10 @@
   --mainBgColor: #ffffff;
   --mainFontColor: #5c5c5c;
   --secondaryColor: #3d3d3d;
-  --secondaryBgColor: #ebebeb;
-  --boxShadowColor: #0000004d;
+  --secondaryBgColor: #e2e2e2;
+  --boxShadowColor: #0000001c;
+  --modalBgColor: #ededed72;
+  --togglerBgColor: #c2c2c2;
 }
 
 * {

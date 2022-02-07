@@ -1,0 +1,41 @@
+.header__button-container {
+    flex: 1 1 auto;
+}
+
+.header__button-toggle {
+  font-size: 1.1rem;
+  color: inherit;
+  display: inline-block;
+}
+
+.header__input-toggle {
+  display: none;
+}
+
+.header__label {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 25px;
+  border-radius: 20px;
+  background: var(--togglerBgColor);
+}
+
+.header__label:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--titleColor);
+  transition: 0.3s left;
+}
+
+.header__input-toggle--light + .header__label:before {
+  left: 7px;
+}
+.header__input-toggle--dark + .header__label:before {
+  left: calc(100% - 25px);
+}

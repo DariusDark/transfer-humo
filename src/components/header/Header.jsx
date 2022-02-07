@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/images/header/logo.svg";
+import Switcher from "./switcher/Switcher";
 
 import "./header.css";
 
-function Header({ handleClick }) {
+function Header({ handleClick, currTheme }) {
   const headerRef = useRef(null);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [showButton, setShowButton] = useState(false);
@@ -37,6 +38,7 @@ function Header({ handleClick }) {
           </div>
           {showButton ? (
             <div className="header__body">
+              <Switcher currTheme={currTheme} handleClick={handleClick} />
               <button
                 className={`header__menu-icon ${
                   isButtonClicked ? "fas fa-times" : "fas fa-bars"
@@ -135,14 +137,7 @@ function Header({ handleClick }) {
                 </nav>
               </div>
               <div className="header__body flex-auto">
-                <div className="header__button-container">
-                  <button
-                    className="header__button-toggle button-toggle--padding"
-                    onClick={handleClick}
-                  >
-                    Свичтер
-                  </button>
-                </div>
+                <Switcher currTheme={currTheme} handleClick={handleClick} />
               </div>
             </>
           )}

@@ -16,7 +16,7 @@ function App() {
   }
   return (
     <div className="wrapper" data-theme={theme}>
-      <Header handleClick={switchMode} />
+      <Header handleClick={switchMode} currTheme={theme} />
       <Application />
       <Opportunities />
       <Advantage />
