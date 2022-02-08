@@ -11,7 +11,6 @@ function App() {
   const defaultLight = window.matchMedia('(prefers-color-scheme: light)').matches;
   const [theme, setTheme] = useLocalStorage('theme', defaultLight ? 'light' : 'dark');
   const switchMode = () => {
-    console.log(theme)
     setTheme(theme === 'light' ? 'dark' : 'light');
   }
   return (

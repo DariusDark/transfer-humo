@@ -1,12 +1,13 @@
-import React from "react";
+import { memo } from "react";
 import "./footer.css";
 import TelegramIcon from '../../assets/images/footer/icon-1.svg';
 import FacebookIcon from '../../assets/images/footer/icon-2.svg';
 import VkontakteIcon from '../../assets/images/footer/icon-3.svg';
 import InstagramIcon from '../../assets/images/footer/icon-4.svg';
 
-function Footer() {
-  const currentDate = new Date().getFullYear();
+const currentDate = new Date().getFullYear();
+
+const Footer = memo(function Footer() {
   return (
     <footer className="footer">
       <div className="footer__top">
@@ -79,6 +80,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+})
 
 export default Footer;

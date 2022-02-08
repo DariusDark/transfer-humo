@@ -1,3 +1,4 @@
+import { memo } from "react";
 import AdvantageItem from "./advantage-item/AdvantageItem";
 import "./advantage.css";
 import photo1 from "../../assets/images/advantage/photo-1.png";
@@ -5,7 +6,7 @@ import photo2 from "../../assets/images/advantage/photo-2.png";
 import photo3 from "../../assets/images/advantage/photo-3.png";
 import photo4 from "../../assets/images/advantage/photo-4.png";
 
-function Advantage() {
+const Advantage = memo(function Advantage() {
   const items = [
     {
       id: 1,
@@ -47,6 +48,6 @@ function Advantage() {
       </div>
     </section>
   );
-}
+});
 
 export default Advantage;

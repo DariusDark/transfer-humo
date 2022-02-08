@@ -1,9 +1,9 @@
-import React from "react";
+import { memo } from "react";
 import FaqItem from "./faq-item/FaqItem";
 import Link from "../link/Link";
 import "./faq.css";
 
-function Faq() {
+const Faq = memo(function Faq() {
   const faqItems = [
     {
       id: 1,
@@ -105,11 +105,13 @@ function Faq() {
           </div>
         </div>
         <div className="faq__link">
-          <Link classValue="link--secondary-orange" source="#application">Скачать “Хумо Переводы”</Link>
+          <Link classValue="link--secondary-orange" source="#application">
+            Скачать “Хумо Переводы”
+          </Link>
         </div>
       </div>
     </section>
   );
-}
+})
 
 export default Faq;

@@ -1,13 +1,10 @@
-import React from "react";
+import { memo } from "react";
 import Link from "../link/Link";
 import iphone from "../../assets/images/application/iphone-application.png";
-import IconApple from "../../assets/images/application/icon-apple.svg";
-import IconPlayMarket from "../../assets/images/application/icon-play-market.svg";
-import IconApk from "../../assets/images/application/icon-apk.svg";
 
 import "./application.css";
 
-function Application() {
+const Application = memo(function Application() {
   return (
     <section className="application" id="application">
       <div className="container">
@@ -55,6 +52,6 @@ function Application() {
       </div>
     </section>
   );
-}
+});
 
 export default Application;
