@@ -30,7 +30,7 @@ function FaqItem({ item: { question, answer } }) {
 
   return (
     <div className={`faq__body${isOpen ? " faq__body--active" : ""}`}>
-      <div className={`faq__question`} onClick={handleClick} >
+      <div className={`faq__question`} onClick={handleClick}>
         <h3 className="faq__question-title">{question}</h3>
         <div
           className={`faq__question-arrow${

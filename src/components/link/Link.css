@@ -21,3 +21,9 @@
   font-weight: 600;
   line-height: 24px;
 }
+
+@media (max-width:590px) {
+  .link--secondary-orange {
+    padding: 12px 30px;
+  }
+}

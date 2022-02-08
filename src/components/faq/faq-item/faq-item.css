@@ -8,9 +8,7 @@
   transition: 0.5s max-height ease-in-out;
 }
 
-.faq__body--active {
-  max-height: 100vh;
-}
+
 
 .faq__question {
   display: flex;
@@ -70,4 +68,15 @@
 
 .faq__answer-link:hover {
   text-decoration: underline;
+}
+
+
+@media (max-width: 630px) {
+ .faq__body {
+   max-height: 80px;
+ }
+}
+
+.faq__body--active {
+  max-height: 100vh;
 }
