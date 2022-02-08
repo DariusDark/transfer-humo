@@ -3,14 +3,19 @@
   background: var(--mainBgColor);
   color: var(--mainFontColor);
   transition: 0.3s border-bottom ease, 0.3s box-shadow ease;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 }
 
-.header--sticky {
-  z-index: 1;
+.header--fixed {
   border-bottom: 1px solid var(--secondaryBgColor);
   box-shadow: 0 0 5px var(--boxShadowColor);
   top: 0;
-  position: sticky;
+}
+
+.header__blank {
+  height: 78px;
 }
 
 .header__body {
