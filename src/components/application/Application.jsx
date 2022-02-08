@@ -23,21 +23,21 @@ const Application = memo(function Application() {
                   classValue="link--secondary application__link application__link-andriod"
                   source="https://play.google.com/store/apps/details?id=tj.humo.transfer"
                 >
-                  <i class="application__icon fab fa-google-play"></i>
+                  <i className="application__icon fab fa-google-play"></i>
                   Скачать для Android
                 </Link>
                 <Link
                   classValue="link--secondary application__link application__link-ios"
                   source="https://apps.apple.com/ru/app//id1497473277"
                 >
-                  <i class="application__icon fab fa-apple"></i>
+                  <i className="application__icon fab fa-apple"></i>
                   Скачать для iOS
                 </Link>
                 <Link
                   classValue="link--secondary application__link application__link-andriod"
                   source="/static/media/205132.f40fee3f.apk"
                 >
-                  <i class="application__icon far fa-file"></i>
+                  <i className="application__icon far fa-file"></i>
                   Android - APK
                 </Link>
               </div>
