@@ -19,14 +19,14 @@ function Switcher({ currTheme, handleClick }) {
         <label className="header__label" htmlFor="inputToggle">
           <img
             className={`header__label-moon switcher-icon ${
-              currTheme === "dark" ? "switcher-icon--active" : ""
+              currTheme === "light" ? "switcher-icon--active" : ""
             }`}
             alt="moon"
             src={moon}
           />
           <img
             className={`header__label-sun switcher-icon ${
-              currTheme === "light" ? "switcher-icon--active" : ""
+              currTheme === "dark" ? "switcher-icon--active" : ""
             }`}
             alt="sun"
             src={sun}

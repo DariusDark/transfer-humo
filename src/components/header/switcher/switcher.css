@@ -49,12 +49,11 @@
 }
 
 .header__label-moon {
-  left: 7px;
+  left: calc(100% - 25px);
 }
 
 .header__label-sun {
-  color: rgb(213, 221, 50);
-  left: calc(100% - 25px);
+  left: 7px;
 }
 
 .header__input-toggle--light + .header__label:before {

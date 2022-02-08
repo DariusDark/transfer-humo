@@ -29,74 +29,112 @@ function Header({ handleClick, currTheme }) {
       }
     });
     window.addEventListener("scroll", function () {
-      headerRef.current.classList.toggle("header--fixed", this.scrollY > 0);
+      headerRef.current.classList.toggle("header--sticky", this.scrollY > 0);
     });
   }, []);
   return (
-    <>
-      <header className="header" ref={headerRef}>
-        <div className="container-lg">
-          <div className="row">
-            <div className="header__body flex-auto">
-              <div className="header__logo">
-                <a className="link--padding" href="#root">
-                  <img
-                    className="header__logo-icon"
-                    src={logo}
-                    alt="Хумо МДО"
-                  />
-                </a>
-              </div>
+    <header className="header" ref={headerRef}>
+      <div className="container-lg">
+        <div className="row">
+          <div className="header__body flex-auto">
+            <div className="header__logo">
+              <a className="link--padding" href="#root">
+                <img className="header__logo-icon" src={logo} alt="Хумо МДО" />
+              </a>
             </div>
-            {showButton ? (
+          </div>
+          {showButton ? (
+            <div className="header__body">
+              <Switcher currTheme={currTheme} handleClick={handleClick} />
+              <button
+                className={`header__menu-icon ${
+                  isButtonClicked ? "fas fa-times" : "fas fa-bars"
+                }`}
+                onClick={() => setIsButtonClicked(!isButtonClicked)}
+              ></button>
+              <nav
+                className={`header__menu-nav ${
+                  isButtonClicked ? "header__menu-nav--active" : ""
+                }`}
+                onClick={closeModalScreen}
+              >
+                <ul className="header__menu-unsorted-list">
+                  <div className="column menu-column">
+                    <li className="header__menu-list">
+                      <a
+                        className="header__link header__menu-link"
+                        href="#application"
+                        onClick={closeModalScreen}
+                      >
+                        Приложение
+                      </a>
+                    </li>
+                    <li className="header__menu-list">
+                      <a
+                        className="header__link header__menu-link"
+                        href="#opportunities"
+                        onClick={closeModalScreen}
+                      >
+                        Возможности
+                      </a>
+                    </li>
+                    <li className="header__menu-list">
+                      <a
+                        className="header__link header__menu-link"
+                        href="#advantage"
+                        onClick={closeModalScreen}
+                      >
+                        Преимущества
+                      </a>
+                    </li>
+                    <li className="header__menu-list">
+                      <a
+                        className="header__link header__menu-link"
+                        href="#faq"
+                        onClick={closeModalScreen}
+                      >
+                        Вопросы и Ответы
+                      </a>
+                    </li>
+                  </div>
+                </ul>
+              </nav>
+            </div>
+          ) : (
+            <>
               <div className="header__body">
-                <Switcher currTheme={currTheme} handleClick={handleClick} />
-                <button
-                  className={`header__menu-icon ${
-                    isButtonClicked ? "fas fa-times" : "fas fa-bars"
-                  }`}
-                  onClick={() => setIsButtonClicked(!isButtonClicked)}
-                ></button>
-                <nav
-                  className={`header__menu-nav ${
-                    isButtonClicked ? "header__menu-nav--active" : ""
-                  }`}
-                  onClick={closeModalScreen}
-                >
-                  <ul className="header__menu-unsorted-list">
-                    <div className="column menu-column">
-                      <li className="header__menu-list">
+                <nav className="header__nav">
+                  <ul className="header__unsorted-list">
+                    <div className="row header-row--gap">
+                      <li className="header__list">
                         <a
-                          className="header__link header__menu-link"
+                          className="header__link link--padding"
                           href="#application"
-                          onClick={closeModalScreen}
                         >
                           Приложение
                         </a>
                       </li>
-                      <li className="header__menu-list">
+                      <li className="header__list">
                         <a
-                          className="header__link header__menu-link"
+                          className="header__link link--padding"
                           href="#opportunities"
-                          onClick={closeModalScreen}
                         >
                           Возможности
                         </a>
                       </li>
-                      <li className="header__menu-list">
+                      <li className="header__list">
                         <a
-                          className="header__link header__menu-link"
+                          className="header__link link--padding"
                           href="#advantage"
-                          onClick={closeModalScreen}
                         >
-                          Преимущества
+                          Преимущество
                         </a>
                       </li>
-                      <li className="header__menu-list">
+                      <li className="header__list">
                         <a
-                          className="header__link header__menu-link"
+                          className="header__link link--padding"
                           href="#faq"
-                          onClick={closeModalScreen}
+                          title="Frequently Asked Questions"
                         >
                           Вопросы и Ответы
                         </a>
@@ -105,59 +143,14 @@ function Header({ handleClick, currTheme }) {
                   </ul>
                 </nav>
               </div>
-            ) : (
-              <>
-                <div className="header__body">
-                  <nav className="header__nav">
-                    <ul className="header__unsorted-list">
-                      <div className="row header-row--gap">
-                        <li className="header__list">
-                          <a
-                            className="header__link link--padding"
-                            href="#application"
-                          >
-                            Приложение
-                          </a>
-                        </li>
-                        <li className="header__list">
-                          <a
-                            className="header__link link--padding"
-                            href="#opportunities"
-                          >
-                            Возможности
-                          </a>
-                        </li>
-                        <li className="header__list">
-                          <a
-                            className="header__link link--padding"
-                            href="#advantage"
-                          >
-                            Преимущество
-                          </a>
-                        </li>
-                        <li className="header__list">
-                          <a
-                            className="header__link link--padding"
-                            href="#faq"
-                            title="Frequently Asked Questions"
-                          >
-                            Вопросы и Ответы
-                          </a>
-                        </li>
-                      </div>
-                    </ul>
-                  </nav>
-                </div>
-                <div className="header__body flex-auto">
-                  <Switcher currTheme={currTheme} handleClick={handleClick} />
-                </div>
-              </>
-            )}
-          </div>
+              <div className="header__body flex-auto">
+                <Switcher currTheme={currTheme} handleClick={handleClick} />
+              </div>
+            </>
+          )}
         </div>
-      </header>
-      <div className="header__blank"></div>
-    </>
+      </div>
+    </header>
   );
 }
 
