@@ -1,8 +1,8 @@
-import React from "react";
-import './opportunities.css';
+import { memo } from "react";
+import "./opportunities.css";
 import OpportunitiesItem from "./opportunities-item/OpportunitiesItem";
 
-function Opportunities() {
+const Opportunities = memo(function Opportunities() {
   const items = [
     {
       id: "1",
@@ -25,9 +25,7 @@ function Opportunities() {
   return (
     <section className="opportunities" id="opportunities">
       <div className="container">
-        <h2 className="opportunities__title">
-          Возможности
-        </h2>
+        <h2 className="opportunities__title">Возможности</h2>
         <div className="row opportunities-row">
           {items.map((currItem) => (
             <OpportunitiesItem key={currItem.id} item={currItem} />
@@ -36,6 +34,6 @@ function Opportunities() {
       </div>
     </section>
   );
-}
+});
 
 export default Opportunities;
