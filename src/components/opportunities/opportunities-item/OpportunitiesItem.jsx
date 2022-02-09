@@ -1,14 +1,14 @@
 import React from "react";
-import './opportunities-item.css'
+import styles from "./opportunities-item.module.css";
 
-function OpportunitiesItem({item : { id, title, descr }}) {
+function OpportunitiesItem({ item: { id, title, descr } }) {
   return (
-    <div className="opportunities__body">
-      <div className="opportunities__item-number">
-        <span className="opportunities__item-number-text">{id}</span>
+    <div className={styles["opportunities__body"]}>
+      <div className={styles["opportunities__item-number"]}>
+        <span className={styles["opportunities__item-number-text"]}>{id}</span>
       </div>
-      <h5 className="opportunities__item-title">{title}</h5>
-      <p className="opportunities__item-description">{descr}</p>
+      <h5 className={styles["opportunities__item-title"]}>{title}</h5>
+      <p className={styles["opportunities__item-description"]}>{descr}</p>
     </div>
   );
 }

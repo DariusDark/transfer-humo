@@ -1,7 +1,7 @@
 import { memo } from "react";
 import FaqItem from "./faq-item/FaqItem";
 import Link from "../link/Link";
-import "./faq.css";
+import styles from "./faq.module.css";
 
 const Faq = memo(function Faq() {
   const faqItems = [
@@ -94,17 +94,17 @@ const Faq = memo(function Faq() {
     },
   ];
   return (
-    <section className="faq" id="faq">
+    <section className={styles["faq"]} id="faq">
       <div className="container">
-        <h3 className="faq__title">Вопросы и ответы</h3>
-        <div className="faq__accordion">
-          <div className="column faq-column">
+        <h3 className={styles["faq__title"]}>Вопросы и ответы</h3>
+        <div className={styles["faq__accordion"]}>
+          <div className={`column ${styles["faq-column"]}`}>
             {faqItems.map((item) => (
               <FaqItem key={item.id} item={item} />
             ))}
           </div>
         </div>
-        <div className="faq__link">
+        <div className={styles["faq__link"]}>
           <Link classValue="link--secondary-orange" source="#application">
             Скачать “Хумо Переводы”
           </Link>
@@ -112,6 +112,6 @@ const Faq = memo(function Faq() {
       </div>
     </section>
   );
-})
+});
 
 export default Faq;

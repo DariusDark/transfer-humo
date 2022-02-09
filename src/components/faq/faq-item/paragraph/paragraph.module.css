@@ -1,0 +1,7 @@
+.faq__answer-link {
+  color: #0d5fb8;
+}
+
+.faq__answer-link:hover {
+  text-decoration: underline;
+}

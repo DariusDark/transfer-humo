@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/images/header/logo.svg";
 import Switcher from "./switcher/Switcher";
 
-import "./header.css";
+import styles from "./header.module.css";
 
 function Header({ handleClick, currTheme }) {
   const headerRef = useRef(null);
@@ -33,36 +33,39 @@ function Header({ handleClick, currTheme }) {
     });
   }, []);
   return (
-    <header className="header" ref={headerRef}>
+    <header
+      className={`${styles["header"]} ${styles["header--sticky"]}`}
+      ref={headerRef}
+    >
       <div className="container-lg">
         <div className="row">
-          <div className="header__body flex-auto">
-            <div className="header__logo">
-              <a className="link--padding" href="#root">
+          <div className={`${styles["header__body"]} ${styles["flex-auto"]}`}>
+            <div className={`${styles["header__logo"]}`}>
+              <a className="header__logo-link" href="#root">
                 <img className="header__logo-icon" src={logo} alt="Хумо МДО" />
               </a>
             </div>
           </div>
           {showButton ? (
-            <div className="header__body">
+            <div className={styles["header__body"]}>
               <Switcher currTheme={currTheme} handleClick={handleClick} />
               <button
-                className={`header__menu-icon ${
+                className={`${styles["header__menu-icon"]} ${
                   isButtonClicked ? "fas fa-times" : "fas fa-bars"
                 }`}
                 onClick={() => setIsButtonClicked(!isButtonClicked)}
               ></button>
               <nav
-                className={`header__menu-nav ${
-                  isButtonClicked ? "header__menu-nav--active" : ""
+                className={`${styles["header__menu-nav"]} ${
+                  isButtonClicked ? styles["header__menu-nav--active"] : ""
                 }`}
                 onClick={closeModalScreen}
               >
                 <ul className="header__menu-unsorted-list">
-                  <div className="column menu-column">
+                  <div className={`column ${styles["menu-column"]}`}>
                     <li className="header__menu-list">
                       <a
-                        className="header__link header__menu-link"
+                        className={`${styles["header__link"]} ${styles["header__menu-link"]}`}
                         href="#application"
                         onClick={closeModalScreen}
                       >
@@ -71,7 +74,7 @@ function Header({ handleClick, currTheme }) {
                     </li>
                     <li className="header__menu-list">
                       <a
-                        className="header__link header__menu-link"
+                        className={`${styles["header__link"]} ${styles["header__menu-link"]}`}
                         href="#opportunities"
                         onClick={closeModalScreen}
                       >
@@ -80,7 +83,7 @@ function Header({ handleClick, currTheme }) {
                     </li>
                     <li className="header__menu-list">
                       <a
-                        className="header__link header__menu-link"
+                        className={`${styles["header__link"]} ${styles["header__menu-link"]}`}
                         href="#advantage"
                         onClick={closeModalScreen}
                       >
@@ -89,7 +92,7 @@ function Header({ handleClick, currTheme }) {
                     </li>
                     <li className="header__menu-list">
                       <a
-                        className="header__link header__menu-link"
+                        className={`${styles["header__link"]} ${styles["header__menu-link"]}`}
                         href="#faq"
                         onClick={closeModalScreen}
                       >
@@ -102,13 +105,13 @@ function Header({ handleClick, currTheme }) {
             </div>
           ) : (
             <>
-              <div className="header__body">
+              <div className={`${styles["header__body"]}`}>
                 <nav className="header__nav">
                   <ul className="header__unsorted-list">
-                    <div className="row header-row--gap">
+                    <div className="row">
                       <li className="header__list">
                         <a
-                          className="header__link link--padding"
+                          className={styles["header__link"]}
                           href="#application"
                         >
                           Приложение
@@ -116,23 +119,20 @@ function Header({ handleClick, currTheme }) {
                       </li>
                       <li className="header__list">
                         <a
-                          className="header__link link--padding"
+                          className={styles["header__link"]}
                           href="#opportunities"
                         >
                           Возможности
                         </a>
                       </li>
                       <li className="header__list">
-                        <a
-                          className="header__link link--padding"
-                          href="#advantage"
-                        >
+                        <a className={styles["header__link"]} href="#advantage">
                           Преимущество
                         </a>
                       </li>
                       <li className="header__list">
                         <a
-                          className="header__link link--padding"
+                          className={styles["header__link"]}
                           href="#faq"
                           title="Frequently Asked Questions"
                         >
@@ -143,7 +143,9 @@ function Header({ handleClick, currTheme }) {
                   </ul>
                 </nav>
               </div>
-              <div className="header__body flex-auto">
+              <div
+                className={`${styles["header__body"]} ${styles["flex-auto"]}`}
+              >
                 <Switcher currTheme={currTheme} handleClick={handleClick} />
               </div>
             </>

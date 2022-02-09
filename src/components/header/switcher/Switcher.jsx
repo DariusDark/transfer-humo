@@ -1,32 +1,32 @@
 import React from "react";
-import "./switcher.css";
+import styles from "./switcher.module.css";
 import sun from "../../../assets/images/header/sun.svg";
 import moon from "../../../assets/images/header/moon.svg";
 function Switcher({ currTheme, handleClick }) {
   return (
-    <div className="header__button-container">
-      <div className="header__button-toggle">
+    <div className={styles["header__button-container"]}>
+      <div className={styles["header__button-toggle"]}>
         <input
-          className={`header__input-toggle ${
+          className={`${styles['header__input-toggle']} ${
             currTheme === "light"
-              ? "header__input-toggle--light"
-              : "header__input-toggle--dark"
+              ? styles["header__input-toggle--light"]
+              : styles["header__input-toggle--dark"]
           }`}
           id="inputToggle"
           type="checkbox"
           onClick={handleClick}
         />
-        <label className="header__label" htmlFor="inputToggle">
+        <label className={styles["header__label"]} htmlFor="inputToggle">
           <img
-            className={`header__label-moon switcher-icon ${
-              currTheme === "light" ? "switcher-icon--active" : ""
+            className={`${styles['header__label-moon']} ${styles['switcher-icon']} ${
+              currTheme === "light" ? styles["switcher-icon--active"] : ""
             }`}
             alt="moon"
             src={moon}
           />
           <img
-            className={`header__label-sun switcher-icon ${
-              currTheme === "dark" ? "switcher-icon--active" : ""
+            className={`${styles['header__label-sun']} ${styles['switcher-icon']} ${
+              currTheme === "dark" ? styles["switcher-icon--active"] : ""
             }`}
             alt="sun"
             src={sun}

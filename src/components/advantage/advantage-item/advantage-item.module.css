@@ -53,10 +53,9 @@
   align-self: flex-end;
 }
 
-
 @media (max-width: 585px) {
   .advantage__body-container {
-      flex: 0 1 100%;
-      text-align: center;
-    }
+    flex: 0 1 100%;
+    text-align: center;
+  }
 }

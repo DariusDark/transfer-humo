@@ -1,5 +1,5 @@
 import { memo } from "react";
-import "./opportunities.css";
+import styles from "./opportunities.module.css";
 import OpportunitiesItem from "./opportunities-item/OpportunitiesItem";
 
 const Opportunities = memo(function Opportunities() {
@@ -23,10 +23,10 @@ const Opportunities = memo(function Opportunities() {
   ];
 
   return (
-    <section className="opportunities" id="opportunities">
+    <section className={styles["opportunities"]} id="opportunities">
       <div className="container">
-        <h2 className="opportunities__title">Возможности</h2>
-        <div className="row opportunities-row">
+        <h2 className={styles["opportunities__title"]}>Возможности</h2>
+        <div className={`row ${styles["opportunities-row"]}`}>
           {items.map((currItem) => (
             <OpportunitiesItem key={currItem.id} item={currItem} />
           ))}
