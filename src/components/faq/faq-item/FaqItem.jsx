@@ -1,31 +1,12 @@
 import { useState } from "react";
 import "./faq-item.css";
+import Paragraph from './paragraph/Paragpraph'
 
 function FaqItem({ item: { question, answer } }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
-  };
-
-  const generateElement = (node) => {
-    if (typeof node === "string") {
-      return <p className="faq__answer-text">{node}</p>;
-    } else {
-      return (
-        <p className="faq__answer-text">
-          {node.text.map((item) =>
-            typeof item === "string" ? (
-              item
-            ) : (
-              <a className="faq__answer-link" href={`tel:${item.number}`}>
-                {item.number}
-              </a>
-            )
-          )}
-        </p>
-      );
-    }
   };
 
   return (
@@ -39,7 +20,7 @@ function FaqItem({ item: { question, answer } }) {
         ></div>
       </div>
       <div className={`faq__answer${isOpen ? " faq__answer--active" : ""}`}>
-        {answer.map((node) => generateElement(node))}
+        {answer.map((node, index) =>  <Paragraph key={index} node={node} />)}
       </div>
     </div>
   );
