@@ -43,7 +43,7 @@ function Header({ handleClick, currTheme }) {
   return (
     <header className={styles["header"]} ref={headerRef}>
       <a className={styles["anchor"]} href="#root" ref={anchorRef}>
-        <i class={`${styles["anchor__arrow"]} fas fa-arrow-up`}></i>
+        <i className={`${styles["anchor__arrow"]} fas fa-arrow-up`}></i>
       </a>
       <div className="container">
         <div className="row">
