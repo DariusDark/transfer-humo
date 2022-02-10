@@ -1,3 +1,10 @@
+.faq__answer-text {
+  margin-bottom: 15px;
+}
+.faq__answer-text:last-child {
+  margin-bottom: 0;
+}
+
 .faq__answer-link {
   color: var(--answerLinkColor);
 }
