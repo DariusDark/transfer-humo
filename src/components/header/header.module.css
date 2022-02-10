@@ -70,3 +70,32 @@
 .header__menu-icon {
   color: var(--titleColor);
 }
+
+.anchor {
+  opacity: 0;
+  display: block;
+  position: fixed;
+  top: 80%;
+  left: 5%;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--anchorBgColor);
+  transition: 0.2s opacity ease;
+}
+
+.anchor--active {
+  opacity: .4;
+}
+
+.anchor:hover {
+  opacity: 1;
+}
+
+.anchor__arrow {
+  font-size: 20px;
+  color: #fff;
+}

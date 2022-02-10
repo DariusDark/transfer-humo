@@ -14,6 +14,7 @@
   --boxShadowColor: #0000001c;
   --modalBgColor: #ffffffec;
   --togglerBgColor: #c2c2c2;
+  --anchorBgColor: #ff5d02;
 }
 
 [data-theme="dark"] {
@@ -25,6 +26,7 @@
   --boxShadowColor: #5c5c5c36;
   --modalBgColor: #383838fa;
   --togglerBgColor: #616161;
+  --anchorBgColor: #fa6d1c;
 }
 
 .container-lg {

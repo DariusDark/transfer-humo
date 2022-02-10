@@ -6,6 +6,7 @@ import styles from "./header.module.css";
 
 function Header({ handleClick, currTheme }) {
   const headerRef = useRef(null);
+  const anchorRef = useRef(null);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [showButton, setShowButton] = useState(false);
 
@@ -33,10 +34,17 @@ function Header({ handleClick, currTheme }) {
         styles["header--sticky"],
         this.scrollY > 0
       );
+      anchorRef.current.classList.toggle(
+        styles["anchor--active"],
+        this.scrollY > 250
+      );
     });
   }, []);
   return (
     <header className={styles["header"]} ref={headerRef}>
+      <a className={styles["anchor"]} href="#root" ref={anchorRef}>
+        <i class={`${styles["anchor__arrow"]} fas fa-arrow-up`}></i>
+      </a>
       <div className="container-lg">
         <div className="row">
           <div className={`${styles["header__body"]} ${styles["flex-auto"]}`}>
