@@ -15,13 +15,13 @@
 .advantage__item-title {
   color: var(--secondaryTitleColor);
   font-weight: 800;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 32px;
   margin-bottom: 12px;
 }
 
 .advantage__item-text {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 28px;
   max-width: 600px;
   margin: 0 auto;

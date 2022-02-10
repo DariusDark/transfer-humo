@@ -18,7 +18,7 @@
 }
 
 .opportunities__item-number-text {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 800;
     color: #fff;
 }
@@ -26,7 +26,7 @@
 .opportunities__item-title {
     color: var(--secondaryTitleColor);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .opportunities__item-description {

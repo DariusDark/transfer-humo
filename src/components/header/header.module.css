@@ -21,7 +21,7 @@
 }
 
 .header__menu-icon {
-  font-size: 28px;
+  font-size: 1.75rem;
   position: relative;
   z-index: 3;
 }
@@ -96,6 +96,6 @@
 }
 
 .anchor__arrow {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #fff;
 }
