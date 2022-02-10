@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/images/header/logo.svg";
 import Switcher from "./switcher/Switcher";
+import Lang from "./lang/Lang";
 
 import styles from "./header.module.css";
 
@@ -47,7 +48,7 @@ function Header({ handleClick, currTheme }) {
       </a>
       <div className="container">
         <div className="row">
-          <div className={`${styles["header__body"]} ${styles["flex-auto"]}`}>
+          <div className={`${styles["header__body"]}`}>
             <div className={`${styles["header__logo"]}`}>
               <a className="header__logo-link" href="#root">
                 <img className="header__logo-icon" src={logo} alt="Хумо МДО" />
@@ -155,6 +156,7 @@ function Header({ handleClick, currTheme }) {
                 className={`${styles["header__body"]} ${styles["flex-auto"]}`}
               >
                 <Switcher currTheme={currTheme} handleClick={handleClick} />
+                <Lang />
               </div>
             </>
           )}
