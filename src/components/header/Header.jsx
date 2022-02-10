@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/images/header/logo.svg";
 import Switcher from "./switcher/Switcher";
-import Lang from "./lang/Lang";
+// import Lang from "./lang/Lang";
 
 import styles from "./header.module.css";
 
@@ -56,7 +56,7 @@ function Header({ handleClick, currTheme }) {
             </div>
           </div>
           {showButton ? (
-            <div className={styles["header__body"]}>
+            <div className={`${styles["header__body"]} ${styles["flex-auto"]}`}>
               <Switcher currTheme={currTheme} handleClick={handleClick} />
               <button
                 className={`${styles["header__menu-icon"]} ${
@@ -156,7 +156,7 @@ function Header({ handleClick, currTheme }) {
                 className={`${styles["header__body"]} ${styles["flex-auto"]}`}
               >
                 <Switcher currTheme={currTheme} handleClick={handleClick} />
-                <Lang />
+                {/* <Lang /> */}
               </div>
             </>
           )}
