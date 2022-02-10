@@ -1,6 +1,7 @@
 .header__button-container {
     flex: 1 1 auto;
-}
+    text-align: right;
+  }
 
 .header__button-toggle {
   font-size: 1.1rem;

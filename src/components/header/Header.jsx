@@ -29,14 +29,14 @@ function Header({ handleClick, currTheme }) {
       }
     });
     window.addEventListener("scroll", function () {
-      headerRef.current.classList.toggle("header--sticky", this.scrollY > 0);
+      headerRef.current.classList.toggle(
+        styles["header--sticky"],
+        this.scrollY > 0
+      );
     });
   }, []);
   return (
-    <header
-      className={`${styles["header"]} ${styles["header--sticky"]}`}
-      ref={headerRef}
-    >
+    <header className={styles["header"]} ref={headerRef}>
       <div className="container-lg">
         <div className="row">
           <div className={`${styles["header__body"]} ${styles["flex-auto"]}`}>
