@@ -45,7 +45,7 @@
   object-fit: cover;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 856px) {
   .application__body-item {
     text-align: center;
   }

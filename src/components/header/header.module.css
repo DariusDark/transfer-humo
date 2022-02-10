@@ -34,6 +34,7 @@
   width: 100%;
   height: 100%;
   background: var(--modalBgColor);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,12 +74,11 @@
 
 .anchor {
   opacity: 0;
-  display: block;
   position: fixed;
-  top: 80%;
-  left: 5%;
-  height: 70px;
-  width: 70px;
+  bottom: 25px;
+  left: 25px;
+  height: 55px;
+  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,7 +88,7 @@
 }
 
 .anchor--active {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .anchor:hover {
