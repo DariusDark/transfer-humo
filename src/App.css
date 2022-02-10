@@ -15,6 +15,7 @@
   --modalBgColor: #ffffffec;
   --togglerBgColor: #c2c2c2;
   --anchorBgColor: #ff5d02;
+  --answerLinkColor: #0d5fb8;
 }
 
 [data-theme="dark"] {
@@ -27,6 +28,7 @@
   --modalBgColor: #383838fa;
   --togglerBgColor: #888888;
   --anchorBgColor: #fa6d1c;
+  --answerLinkColor: #5eacff;
 }
 
 .container {

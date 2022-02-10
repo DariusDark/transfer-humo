@@ -1,5 +1,5 @@
 .faq__answer-link {
-  color: #0d5fb8;
+  color: var(--answerLinkColor);
 }
 
 .faq__answer-link:hover {
