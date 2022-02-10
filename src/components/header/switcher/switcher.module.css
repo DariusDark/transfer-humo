@@ -1,7 +1,7 @@
 .header__button-container {
-    flex: 1 1 auto;
-    text-align: right;
-  }
+  flex: 1 1 auto;
+  text-align: right;
+}
 
 .header__button-toggle {
   font-size: 1.1rem;
@@ -51,10 +51,14 @@
 
 .header__label-moon {
   left: calc(100% - 25px);
+  filter: invert(10%) sepia(4%) saturate(15%) hue-rotate(314deg) brightness(95%)
+    contrast(77%);
 }
 
 .header__label-sun {
   left: 7px;
+  filter: invert(99%) sepia(3%) saturate(894%) hue-rotate(300deg)
+    brightness(115%) contrast(77%);
 }
 
 .header__input-toggle--light + .header__label:before {
