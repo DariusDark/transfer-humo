@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/images/header/logo.svg";
 import Switcher from "./switcher/Switcher";
-// import Lang from "./lang/Lang";
+import Lang from "./lang/Lang";
 
 import styles from "./header.module.css";
 
