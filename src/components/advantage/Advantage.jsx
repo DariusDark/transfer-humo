@@ -5,33 +5,41 @@ import photo1 from "../../assets/images/advantage/photo-1.png";
 import photo2 from "../../assets/images/advantage/photo-2.png";
 import photo3 from "../../assets/images/advantage/photo-3.png";
 import photo4 from "../../assets/images/advantage/photo-4.png";
+import { useTranslation } from "react-i18next";
 
 const Advantage = memo(function Advantage() {
+  const { t } = useTranslation();
+
+  const item1 = t("advantage", { returnObjects: true }).item1;
+  const item2 = t("advantage", { returnObjects: true }).item2;
+  const item3 = t("advantage", { returnObjects: true }).item3;
+  const item4 = t("advantage", { returnObjects: true }).item4;
+
   const items = [
     {
       id: 1,
-      title: "Перевод по номеру телефона",
-      text: "Отправляйте деньги родным, даже если у них нет карты",
+      title: item1.title,
+      text: item1.description,
       photo: photo1,
       itemImageClassName: "advantage__image--align-self-end",
     },
     {
       id: 2,
-      title: "Перевод на карты «Корти Милли»",
-      text: "Переводите деньги из России в Таджикистан и обратно",
+      title: item2.title,
+      text: item2.description,
       photo: photo2,
       itemClassName: "advantage-row--reverse",
     },
     {
       id: 3,
-      title: "Платежи",
-      text: "Оплачивайте мобильную связь, коммунальные услуги и многое другое",
+      title: item3.title,
+      text: item3.description,
       photo: photo3,
     },
     {
       id: 4,
-      title: "Карты",
-      text: "Прикрепляйте карты (Visa, Mastercard или «Мир» выпущенные в России)",
+      title: item4.title,
+      text: item4.description,
       photo: photo4,
       itemClassName: "advantage-row--reverse",
       itemImageClassName: "advantage__image--align-self-end",

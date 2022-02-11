@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import logo from "../../assets/images/header/logo.svg";
 import Switcher from "./switcher/Switcher";
 import Lang from "./lang/Lang";
@@ -10,6 +11,13 @@ function Header({ handleClick, currTheme }) {
   const anchorRef = useRef(null);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [showButton, setShowButton] = useState(false);
+
+  const { t } = useTranslation();
+
+  const applicationText = t("header", { returnObjects: true }).application;
+  const capabilitiesText = t("header", { returnObjects: true }).capabilities;
+  const advantagesText = t("header", { returnObjects: true }).advantages;
+  const faqText = t("header", { returnObjects: true }).faq;
 
   useEffect(() => {
     isButtonClicked
@@ -58,6 +66,7 @@ function Header({ handleClick, currTheme }) {
           {showButton ? (
             <div className={`${styles["header__body"]} ${styles["flex-auto"]}`}>
               <Switcher currTheme={currTheme} handleClick={handleClick} />
+              <Lang />
               <button
                 className={`${styles["header__menu-icon"]} ${
                   isButtonClicked ? "fas fa-times" : "fas fa-bars"
@@ -78,7 +87,7 @@ function Header({ handleClick, currTheme }) {
                         href="#application"
                         onClick={closeModalScreen}
                       >
-                        Приложение
+                        {applicationText}
                       </a>
                     </li>
                     <li className="header__menu-list">
@@ -87,7 +96,7 @@ function Header({ handleClick, currTheme }) {
                         href="#opportunities"
                         onClick={closeModalScreen}
                       >
-                        Возможности
+                        {capabilitiesText}
                       </a>
                     </li>
                     <li className="header__menu-list">
@@ -96,7 +105,7 @@ function Header({ handleClick, currTheme }) {
                         href="#advantage"
                         onClick={closeModalScreen}
                       >
-                        Преимущества
+                        {advantagesText}
                       </a>
                     </li>
                     <li className="header__menu-list">
@@ -105,7 +114,7 @@ function Header({ handleClick, currTheme }) {
                         href="#faq"
                         onClick={closeModalScreen}
                       >
-                        Вопросы и Ответы
+                        {faqText}
                       </a>
                     </li>
                   </div>
@@ -123,7 +132,7 @@ function Header({ handleClick, currTheme }) {
                           className={styles["header__link"]}
                           href="#application"
                         >
-                          Приложение
+                          {applicationText}
                         </a>
                       </li>
                       <li className="header__list">
@@ -131,12 +140,12 @@ function Header({ handleClick, currTheme }) {
                           className={styles["header__link"]}
                           href="#opportunities"
                         >
-                          Возможности
+                          {capabilitiesText}
                         </a>
                       </li>
                       <li className="header__list">
                         <a className={styles["header__link"]} href="#advantage">
-                          Преимущество
+                          {advantagesText}
                         </a>
                       </li>
                       <li className="header__list">
@@ -145,7 +154,7 @@ function Header({ handleClick, currTheme }) {
                           href="#faq"
                           title="Frequently Asked Questions"
                         >
-                          Вопросы и Ответы
+                          {faqText}
                         </a>
                       </li>
                     </div>
@@ -156,7 +165,7 @@ function Header({ handleClick, currTheme }) {
                 className={`${styles["header__body"]} ${styles["flex-auto"]}`}
               >
                 <Switcher currTheme={currTheme} handleClick={handleClick} />
-                {/* <Lang /> */}
+                <Lang />
               </div>
             </>
           )}

@@ -1,20 +1,28 @@
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
 import Link from "../link/Link";
 import iphone from "../../assets/images/application/iphone-application.png";
 
 import styles from "./application.module.css";
 
 const Application = memo(function Application() {
+  const { t } = useTranslation();
+
+  const titleText = t("application", { returnObjects: true }).title;
+  const descriptionText = t("application", {
+    returnObjects: true,
+  }).description;
+  const linkText = t("application", { returnObjects: true }).button;
+
   return (
     <section className={styles["application"]} id="application">
       <div className="container">
         <div className={`row ${styles["application-row"]}`}>
           <div className={styles["application__body"]}>
             <div className={styles["application__body-item"]}>
-              <h1 className={styles["application__title"]}>Хумо Переводы</h1>
+              <h1 className={styles["application__title"]}>{titleText}</h1>
               <p className={styles["application__description"]}>
-                Оплачивайте мобильную связь, интернет, коммунальные услуги и
-                многое другое. Отправляйте деньги родным на карты “Корти Милли”
+                {descriptionText}
               </p>
               <div className={styles["application__links"]}>
                 <Link
@@ -24,7 +32,7 @@ const Application = memo(function Application() {
                   <i
                     className={`${styles["application__icon"]} fab fa-google-play`}
                   ></i>
-                  Скачать для Android
+                  {linkText} Android
                 </Link>
                 <Link
                   classValue={`link--secondary`}
@@ -33,7 +41,7 @@ const Application = memo(function Application() {
                   <i
                     className={`${styles["application__icon"]} fab fa-apple`}
                   ></i>
-                  Скачать для iOS
+                  {linkText} iOS
                 </Link>
                 <Link
                   classValue={`link--secondary`}

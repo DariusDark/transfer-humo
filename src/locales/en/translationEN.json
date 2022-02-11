@@ -1,0 +1,46 @@
+{
+  "header": {
+    "application": "Application",
+    "capabilities": "Capabilities",
+    "advantages": "Advantages",
+    "faq": "FAQ"
+  },
+  "application": {
+    "title": "Humo Transfer",
+    "description": "Pay for cell phones, Internet, utilities, and more. Send money to your relatives on “National” Card cards",
+    "button": "Download for"
+  },
+  "opportunities": {
+    "title": "Opportunities",
+    "item1": {
+      "title": "Send money",
+      "description": "Money transfers to family and friends"
+    },
+    "item2": {
+      "title": "Pay for services",
+      "description": "Pay your utility bills, Internet bills, and more"
+    },
+    "item3": {
+      "title": "Watch the course",
+      "description": "Watch the exchange rate 24/7"
+    }
+  },
+  "advantage": {
+    "item1": {
+      "title": "Transfer by phone number",
+      "description": "Send money to relatives, even if they do not have a card"
+    },
+    "item2": {
+      "title": "Transfer to «National Card»",
+      "description": "Transfer money from Russia to Tajikistan and back"
+    },
+    "item3": {
+      "title": "Payments",
+      "description": "Pay for cell phones, utilities, and more"
+    },
+    "item4": {
+      "title": "Cards",
+      "description": "Attach cards (Visa, Mastercard or 'Mir' issued in Russia)"
+    }
+  }
+}

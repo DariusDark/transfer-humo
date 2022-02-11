@@ -20,8 +20,8 @@
 
 [data-theme="dark"] {
   --mainBgColor: #414141;
-  --mainFontColor: rgb(211, 211, 211);
-  --titleColor: #e2e2e2;
+  --mainFontColor: #d3d3d3;
+  --titleColor: #ebebeb;
   --secondaryTitleColor: #ededed;
   --secondaryBgColor: #5a5a5a;
   --boxShadowColor: #5c5c5c36;

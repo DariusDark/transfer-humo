@@ -1,4 +1,5 @@
 import './App.css'
+import './i18n'
 import useLocalStorage from 'use-local-storage'
 import Faq from './components/faq/Faq'
 import Header from './components/header/Header'
