@@ -103,7 +103,7 @@ const Faq = memo(function Faq() {
         </div>
         <div className={styles["faq__link"]}>
           <Link classValue="link--secondary-orange" source="#application">
-            Скачать “Хумо Переводы”
+              {button}
           </Link>
         </div>
       </div>
