@@ -22,7 +22,11 @@ function FaqItem({ item: { question, answer } }) {
           ${isOpen ? styles["faq__question-arrow--active"] : ""}`}
         ></div>
       </div>
-      <div className={`${styles['faq__answer']} ${isOpen ? styles["faq__answer--active"] : ""}`}>
+      <div
+        className={`${styles["faq__answer"]} ${
+          isOpen ? styles["faq__answer--active"] : ""
+        }`}
+      >
         {answer.map((node, index) => (
           <Paragraph key={index} node={node} />
         ))}

@@ -17,7 +17,6 @@ function Lang() {
     >
       <option value="ru">Ru</option>
       <option value="en">En</option>
-      <option value="tj">Tj</option>
     </select>
   );
 }

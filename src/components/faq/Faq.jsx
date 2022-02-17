@@ -2,91 +2,87 @@ import { memo } from "react";
 import FaqItem from "./faq-item/FaqItem";
 import Link from "../link/Link";
 import styles from "./faq.module.css";
+import { useTranslation } from "react-i18next";
 
 const Faq = memo(function Faq() {
+  const { t, i18n } = useTranslation();
+
+  const faqTitle = t("faq", { returnObjects: true }).title;
+  const item1 = t("faq", { returnObjects: true }).item1;
+  const item2 = t("faq", { returnObjects: true }).item2;
+  const item3 = t("faq", { returnObjects: true }).item3;
+  const item4 = t("faq", { returnObjects: true }).item4;
+  const item5 = t("faq", { returnObjects: true }).item5;
+  const item6 = t("faq", { returnObjects: true }).item6;
+  const item7 = t("faq", { returnObjects: true }).item7;
+  const item8 = t("faq", { returnObjects: true }).item8;
+  const item9 = t("faq", { returnObjects: true }).item9;
+  const item10 = t("faq", { returnObjects: true }).item10;
   const faqItems = [
     {
       id: 1,
-      question: "Что такое Хумо Переводы?",
-      answer: [
-        "Хумо переводы - это платформа, позволяющая пользователям переводить деньги с российских карт(VISA, MasterCard и МИР) на любые карты Корти Милли Таджикистана и обратно, делать переводы на популярные электронные кошельки:",
-        "Хумо Онлайн, Мeгфон Life, Алиф Mobi, Яндекс деньги, DC Wallet, Qiwi и многие другие, оплачивать коммунальные услуги, погашать кредиты и многое другое.",
-      ],
+      question: item1.question,
+      answer: [item1.answer.text1, item1.answer.text2],
     },
     {
       id: 2,
-      question: "Кто может пользоваться приложением?",
-      answer: [
-        "Любой клиент у которого есть карты Visa, MasterCard и МИР, выпущенные в Росии либо карта Корти Милли любого банка Таджикистана.",
-      ],
+      question: item2.question,
+      answer: [item2.answer],
     },
     {
       id: 3,
-      question: "Как перевести денги на другую карту?",
-      answer: [
-        '1. Выберите на главном экране вариант "Перевести на карту".',
-        'Выберите куда хотите перевести деньги: "В Таджикистан" или "В Россию". В поле Получателя введите номер карты и сумму.',
-        "2. В новом окне введите данные своей карты и подтвердите операцию.",
-      ],
+      question: item3.question,
+      answer: [item3.answer.text1, item3.answer.text2, item3.answer.text3],
     },
     {
       id: 4,
-      question: "Как перевести деньги на счет Хумо Онлайн?",
-      answer: [
-        '1. Выберите на главном экране вариант "Перевести на счет". В поле получателя введите номер телефона, к которому прикреплен счет получателя и сумму(в рублях)',
-        "2. В новом окне введите данные своей карты и подтвердите операцию.",
-      ],
+      question: item4.question,
+      answer: [item4.answer.text1, item4.answer.text2],
     },
     {
       id: 5,
-      question: "Как привязать карту?",
+      question: item5.question,
       answer: [
-        '1. Выберите раздел "Карты".',
-        '2. Нажмите на кнопку "Добваить карту" и выберите какую карту хотите привязать. Российскую карту или Корти Милли',
-        "3. Заполните данные карты и подтвердите 3D-Secure если это российская карта.",
-        "4. Подождите пока данные карты проверяются.",
+        item5.answer.text1,
+        item5.answer.text2,
+        item5.answer.text3,
+        item5.answer.text4,
       ],
     },
     {
       id: 6,
-      question: "Как оплачивать услуги онлайн?",
+      question: item6.question,
       answer: [
-        '1. Нажмите на раздел "Платежи" и выберите нужную Вам категорию (Например, Мобильная связь).',
-        "2. Выберите сервис(Например, Мегафон).",
-        "3. Введите номер и сумму",
-        "4. Введите данные своей карты и подтвердите операцию",
+        item6.answer.text1,
+        item6.answer.text2,
+        item6.answer.text3,
+        item6.answer.text4,
       ],
     },
     {
       id: 7,
-      question: "Что такое CVV2/CVC2?",
-      answer: [
-        "CVV2 или CVC2 - это специальный код карты, который используется для подтверждения айтентификации. Обычно этот код написан на задней стороне карты. У карт Visa Electron и MasterCard Maestro иногда нет CVV2/CVC2 кода. Если у Вашей карты нет этого кода, Вам необходимо обратиться к своему банку и запросить код.",
-      ],
+      question: item7.question,
+      answer: [item7.answer],
     },
     {
       id: 8,
-      question: "Какие лимиты при переводе и оплате услуг?",
-      answer: [
-        "Минимальная сумма перевода или оплаты составляет - 500 рублей, максимальная сумма - 50000 рублей.",
-      ],
+      question: item8.question,
+      answer: [item8.answer],
     },
     {
       id: 9,
-      question: "Есть ли комиссия при переводе из России в Таджикистан?",
-      answer: [
-        "Комиссия за перевод денег из России в Таджикистан составляет 0.5% Также, комиссию могут брать другие банки, на карты которых вы будете отправлять деньги. Чтобы узнать подробнее о комиссиях других банков, напишите в поддержку.",
-      ],
+      question: item9.question,
+      answer: [item9.answer],
     },
     {
       id: 10,
-      question: "Что делать, если деньги не дошли?",
+      question: item10.question,
       answer: [
         {
           text: [
-            "Транзакция можеть быть еще не обработана. Если уже несколько часов так и не пополнился баланс оплаченной услуги, обратитесь к нам. Контакт центр:",
+            item10.answer.text1,
             { type: "tel", number: " (+992)88-777-55-44 " },
-            "или",
+            item10.answer.text2,
             { type: "tel", number: " 544 " },
           ],
         },
@@ -96,7 +92,7 @@ const Faq = memo(function Faq() {
   return (
     <section className={styles["faq"]} id="faq">
       <div className="container">
-        <h3 className={styles["faq__title"]}>Вопросы и ответы</h3>
+        <h3 className={styles["faq__title"]}>{faqTitle}</h3>
         <div className={styles["faq__accordion"]}>
           <div className={`column ${styles["faq-column"]}`}>
             {faqItems.map((item) => (

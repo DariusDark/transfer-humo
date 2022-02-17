@@ -42,5 +42,71 @@
       "title": "Cards",
       "description": "Attach cards (Visa, Mastercard or 'Mir' issued in Russia)"
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "item1": {
+      "question": "What is Humo Transfers?",
+      "answer": {
+        "text1": "Humo transfers is a platform that allows users to transfer money from Russian cards (VISA, MasterCard and MIR) to any Korti Milli cards of Tajikistan and vice versa, make transfers to popular electronic wallets:",
+        "text2": "Humo Online, Megfon Life, Alif Mobi, Yandex money, DC Wallet , Qiwi and many others, pay utility bills, repay loans and much more."
+      }
+    },
+    "item2": {
+      "question": "Who can use the application?",
+      "answer": "Any client who has Visa, MasterCard and MIR cards issued in Russia or a Korti Milli card of any bank in Tajikistan."
+    },
+    "item3": {
+      "question": "How to transfer money to another card?",
+      "answer": {
+        "text1": "1. Select the 'Transfer to card' option from the main screen.",
+        "text2": "Choose where you want to transfer money: 'To Tajikistan' or 'To Russia'. Enter the card number and amount in the Beneficiary field.",
+        "text3": "2. In the new window, enter your card details and confirm the operation."
+      }
+    },
+    "item4": {
+      "question": "How to transfer money to Humo Online account?",
+      "answer": {
+        "text1": "1. Select the 'Transfer to Account' option on the main screen. In the recipient field, enter the phone number to which the recipient's account is attached and the amount (in rubles).",
+        "text2": "2. In the new window, enter your card details and confirm the operation."
+      }
+    },
+    "item5": {
+      "question": "How to link a card?",
+      "answer": {
+        "text1": "1. Select the 'Cards' section.",
+        "text2": "2. Click on the 'Add card' button and select which card you want to link. Russian card or Korti Milli.",
+        "text3": "3. Fill in the card details and confirm 3D-Secure if it is a Russian card.",
+        "text4": "4. Please wait while the card details are being verified."
+      }
+    },
+    "item6": {
+      "question": "How to pay for services online?",
+      "answer": {
+        "text1": "1. Click on the 'Payments' section and select the category you need (For example, Mobile communications).",
+        "text2": "2. Select a service (For example, Megafon).",
+        "text3": "3. Enter number and amount.",
+        "text4": "4. Enter your card details and confirm the transaction."
+      }
+    },
+    "item7": {
+      "question": "What is CVV2/CVC2?",
+      "answer": "CVV2 or CVC2 is a special card code that is used to confirm authentication. This code is usually written on the back of the card. Visa Electron and MasterCard Maestro cards sometimes do not have a CVV2/CVC2 code. If your card does not have this code, you need to contact your bank and request the code."
+    },
+    "item8": {
+      "question": "What are the limits for transferring and paying for services?",
+      "answer": "The minimum transfer or payment amount is 500 rubles, the maximum amount is 50,000 rubles."
+    },
+    "item9": {
+      "question": "Is there a commission when transferring from Russia to Tajikistan?",
+      "answer": "The commission for transferring money from Russia to Tajikistan is 0.5%. Also, other banks may charge a commission, to whose cards you will send money. To find out more about the commissions of other banks, write to support."
+    },
+    "item10": {
+      "question": "What to do if the money has not arrived?",
+      "answer": {
+        "text1": "The transaction may not be processed yet. If the balance of the paid service has not been replenished for several hours, please contact us. Contact center:",
+        "text2": "or"
+      }
+    }
   }
 }
