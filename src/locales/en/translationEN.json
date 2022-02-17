@@ -108,5 +108,15 @@
         "text2": "or"
       }
     }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Progressive and one of the leading microfinance institutions in Tajikistan, providing banking services to more than 100 thousand clients",
+    "address": "734061, Dushanbe, st. N. Karabaev, 148/1.",
+    "social": "We are in social networks"
+  },
+  "footer": {
+    "company": "CJSC MDO «Humo»",
+    "rights": "All rights reserved"
   }
 }

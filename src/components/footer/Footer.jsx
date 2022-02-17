@@ -4,32 +4,34 @@ import TelegramIcon from "../../assets/images/footer/icon-1.svg";
 import FacebookIcon from "../../assets/images/footer/icon-2.svg";
 import VkontakteIcon from "../../assets/images/footer/icon-3.svg";
 import InstagramIcon from "../../assets/images/footer/icon-4.svg";
+import { useTranslation } from "react-i18next";
 
 const currentDate = new Date().getFullYear();
 
 const Footer = memo(function Footer() {
+  const {t} = useTranslation();
+  const about = t("about", {returnObjects: true});
+  const footer = t("footer", {returnObjects: true});
   return (
     <footer className={styles["footer"]}>
       <div className={styles["footer__top"]}>
         <div className="container">
           <div className={`row ${styles["footer-row"]}`}>
             <div className={styles["footer__body"]}>
-              <h6 className={styles["footer__title"]}>О нас</h6>
+              <h6 className={styles["footer__title"]}>{about.title}</h6>
               <p className="footer__description">
-                Прогрессивная и одна из лидирующих микрофинансовых организаций в
-                Таджикистане, предоставляющая банковские услуги более 100
-                тысячам клиентов.
+                {about.description}
               </p>
               <div className="footer__address">
                 <p className="footer__address-text">
-                  734061, г. Душанбе, ул. Н. Карабаева, 148/1.
+                  {about.address}
                 </p>
               </div>
             </div>
             <div
               className={`${styles["footer__body"]} ${styles["footer__body--self-end"]}`}
             >
-              <h6 className={styles["footer__title"]}>Мы в соц-сетях</h6>
+              <h6 className={styles["footer__title"]}>{about.social}</h6>
               <div className={styles["footer__icons"]}>
                 <a className="footer__icon-link" href="https://t.me/bankhumo">
                   <img
@@ -84,7 +86,7 @@ const Footer = memo(function Footer() {
             >
               <div className="footer__date">
                 <span className="footer__date-text">
-                  {`© ${currentDate} ЗАО МДО «Хумо»`}
+                  {`© ${currentDate} ${footer.company}`}
                 </span>
               </div>
             </div>
@@ -93,7 +95,7 @@ const Footer = memo(function Footer() {
             >
               <div className="footer__copyright">
                 <span className="footer__copyright-text">
-                  All rights reserved
+                  {footer.rights}
                 </span>
               </div>
             </div>
