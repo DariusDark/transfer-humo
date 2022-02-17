@@ -107,7 +107,8 @@
         "text1": "The transaction may not be processed yet. If the balance of the paid service has not been replenished for several hours, please contact us. Contact center:",
         "text2": "or"
       }
-    }
+    },
+    "button": "Download “Humo Transfer”"
   },
   "about": {
     "title": "About Us",

@@ -18,6 +18,7 @@ const Faq = memo(function Faq() {
   const item8 = t("faq", { returnObjects: true }).item8;
   const item9 = t("faq", { returnObjects: true }).item9;
   const item10 = t("faq", { returnObjects: true }).item10;
+  const button = t("faq", { returnObjects: true }).button;
   const faqItems = [
     {
       id: 1,
