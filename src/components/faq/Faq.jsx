@@ -5,7 +5,7 @@ import styles from "./faq.module.css";
 import { useTranslation } from "react-i18next";
 
 const Faq = memo(function Faq() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const faqTitle = t("faq", { returnObjects: true }).title;
   const item1 = t("faq", { returnObjects: true }).item1;
