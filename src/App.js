@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './App.css'
 import './i18n'
 import useLocalStorage from 'use-local-storage'
@@ -14,6 +15,7 @@ function App() {
   const switchMode = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   }
+  window.document.querySelector('html').style.colorScheme = theme;
   return (
     <div className="wrapper" data-theme={theme}>
       <Header handleClick={switchMode} currTheme={theme} />
