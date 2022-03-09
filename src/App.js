@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import './App.css'
 import './i18n'
 import useLocalStorage from 'use-local-storage'
