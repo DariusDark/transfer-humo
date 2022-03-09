@@ -6,7 +6,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 const TRAKING_ID = 'G-QGGLMJZ2EB';
 
-ReactGA.initialize(TRAKING_ID);
+ReactGA.initialize(TRAKING_ID, {
+  testMode: true,
+});
 ReactGA.send('pageview');
 
 ReactDOM.render(
