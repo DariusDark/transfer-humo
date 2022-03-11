@@ -7,7 +7,7 @@ function Switcher({ currTheme, handleClick }) {
     <div className={styles["header__button-container"]}>
       <div className={styles["header__button-toggle"]}>
         <input
-          className={`${styles['header__input-toggle']} ${
+          className={`${styles["header__input-toggle"]} ${
             currTheme === "light"
               ? styles["header__input-toggle--light"]
               : styles["header__input-toggle--dark"]
@@ -18,16 +18,16 @@ function Switcher({ currTheme, handleClick }) {
         />
         <label className={styles["header__label"]} htmlFor="inputToggle">
           <img
-            className={`${styles['header__label-moon']} ${styles['switcher-icon']} ${
-              currTheme === "light" ? styles["switcher-icon--active"] : ""
-            }`}
+            className={`${styles["header__label-moon"]} ${
+              styles["switcher-icon"]
+            } ${currTheme === "light" ? styles["switcher-icon--active"] : ""}`}
             alt="moon"
             src={moon}
           />
           <img
-            className={`${styles['header__label-sun']} ${styles['switcher-icon']} ${
-              currTheme === "dark" ? styles["switcher-icon--active"] : ""
-            }`}
+            className={`${styles["header__label-sun"]} ${
+              styles["switcher-icon"]
+            } ${currTheme === "dark" ? styles["switcher-icon--active"] : ""}`}
             alt="sun"
             src={sun}
           />
