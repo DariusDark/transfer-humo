@@ -5,7 +5,8 @@ import moon from "../../../assets/images/header/moon.svg";
 function Switcher({ currTheme, handleClick }) {
   return (
     <div className={styles["header__button-container"]}>
-      <div className={styles["header__button-toggle"]}>
+      <div className={styles["header__button-toggle"]}
+      onClick={() => window.dataLayer.push({ "event": "change_theme" })}>
         <input
           className={`${styles["header__input-toggle"]} ${
             currTheme === "light"
