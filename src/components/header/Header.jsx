@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import logo from "../../assets/images/header/logo.svg";
 import Switcher from "./switcher/Switcher";
 import Lang from "./lang/Lang";
+import ReactGA from 'react-ga4';
 
 import styles from "./header.module.css";
 
@@ -51,7 +52,12 @@ function Header({ handleClick, currTheme }) {
   }, []);
   return (
     <header className={styles["header"]} ref={headerRef}>
-      <a className={styles["anchor"]} href="#root" ref={anchorRef}>
+      <a className={styles["anchor"]} href="#root" ref={anchorRef} onClick={() => {
+        ReactGA.event({
+          category: "anchor",
+          action: "anchor_click",
+        })
+      }}>
         <i className={`${styles["anchor__arrow"]} fas fa-arrow-up`}></i>
       </a>
       <div className="container">

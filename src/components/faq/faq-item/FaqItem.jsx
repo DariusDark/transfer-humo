@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./faq-item.module.css";
 import Paragraph from "./paragraph/Paragpraph";
+import ReactGA from "react-ga4";
 
 function FaqItem({ item: { question, answer } }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,14 @@ function FaqItem({ item: { question, answer } }) {
       className={`${styles["faq__body"]} ${
         isOpen ? styles["faq__body--active"] : ""
       }`}
-    >
+      onClick={() => {
+        ReactGA.event({
+          category: "question-spoiler",
+          action: "question_spoiler",
+        });
+        handleClick();
+      }}
+     >
       <div className={styles["faq__question"]} onClick={handleClick}>
         <h3 className={styles["faq__question-title"]}>{question}</h3>
         <div

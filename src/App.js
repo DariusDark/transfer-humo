@@ -8,6 +8,14 @@ import Advantage from './components/advantage/Advantage'
 import Application from './components/application/Application'
 import Opportunities from './components/opportunities/Opportunities'
 
+import ReactGA from 'react-ga4';
+
+const TRACKING_ID = 'G-QGGLMJZ2EB';
+
+ReactGA.initialize(TRACKING_ID);
+
+ReactGA.send('pageview', window.location.pathname);
+
 function App() {
   const defaultLight = window.matchMedia('(prefers-color-scheme: light)').matches;
   const [theme, setTheme] = useLocalStorage('theme', defaultLight ? 'light' : 'dark');

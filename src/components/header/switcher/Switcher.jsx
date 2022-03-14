@@ -2,11 +2,19 @@ import React from "react";
 import styles from "./switcher.module.css";
 import sun from "../../../assets/images/header/sun.svg";
 import moon from "../../../assets/images/header/moon.svg";
+import ReactGA from "react-ga4";
 function Switcher({ currTheme, handleClick }) {
   return (
     <div className={styles["header__button-container"]}>
-      <div className={styles["header__button-toggle"]}
-      onClick={() => window.dataLayer.push({ "event": "change_theme" })}>
+      <div
+        className={styles["header__button-toggle"]}
+        onClick={() =>
+          ReactGA.event({
+            category: "color-theme",
+            action: "theme_change",
+          })
+        }
+      >
         <input
           className={`${styles["header__input-toggle"]} ${
             currTheme === "light"
