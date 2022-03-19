@@ -11,10 +11,10 @@ import Opportunities from './components/opportunities/Opportunities'
 import ReactGA from 'react-ga4';
 import LogRocket from 'logrocket';
 
-LogRocket.init('4qjnny/test');
 
 const TRACKING_ID = 'G-QGGLMJZ2EB';
 
+LogRocket.init('4qjnny/test');
 ReactGA.initialize(TRACKING_ID);
 
 ReactGA.send('pageview', window.location.pathname);
